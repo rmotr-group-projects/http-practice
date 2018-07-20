@@ -81,3 +81,5 @@ def test_7_perform_redirect_request():
     location_header = perform_redirect_request()
 
     assert location_header == '/get'
+
+print(test_1_perform_get_request())
