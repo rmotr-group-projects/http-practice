@@ -63,3 +63,4 @@ def perform_redirect_request():
     params = {'url' : 'https://google.com'}
     response = requests.get(url, params=params, allow_redirects=False)
     return response.headers['Location']
+    
