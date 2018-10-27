@@ -57,4 +57,4 @@ def perform_redirect_request():
     # HINT: you should use the allow_redirects parameter while doing the request
     url = 'https://httpbin.org/redirect/1'
     response = requests.get(url, allow_redirects=False)
-    return response
+    return response.headers['Location']
