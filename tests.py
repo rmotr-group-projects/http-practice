@@ -35,7 +35,7 @@ def test_3_perform_post_request():
         'first_name': 'Guido',
         'last_name': 'van Rossum'
     }
-
+    print(response.json())
     assert response.status_code == 200
     assert response.request.method == 'POST'
     assert response.request.url == 'https://httpbin.org/post'
@@ -79,5 +79,4 @@ def test_6_perform_delete_request():
 
 def test_7_perform_redirect_request():
     location_header = perform_redirect_request()
-
     assert location_header == '/get'
