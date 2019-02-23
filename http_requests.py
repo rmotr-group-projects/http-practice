@@ -23,7 +23,8 @@ def perform_post_request():
         'first_name': 'Guido',
         'last_name': 'van Rossum'
     }
-    pass
+    response = requests.post(url, json=data) 
+    return response 
 
 
 def perform_put_request():
