@@ -12,7 +12,8 @@ def perform_get_request_with_params():
     """Perform GET request to given URL sending any parameter and return the response"""
     # HINT: you should add the GET parameters at the end of the url
     url = 'https://httpbin.org/get'
-    pass
+    response = requests.get(url, params={'user': 'tran'})
+    return response 
 
 
 def perform_post_request():
