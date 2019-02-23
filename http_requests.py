@@ -44,7 +44,8 @@ def perform_patch_request():
     data = {
         'first_name': 'Guido'
     }
-    pass
+    response = requests.patch(url, json=data)
+    return response 
 
 
 def perform_delete_request():
