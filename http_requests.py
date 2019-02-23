@@ -34,7 +34,8 @@ def perform_put_request():
         'first_name': 'Guido',
         'last_name': 'van Rossum'
     }
-    pass
+    response = requests.put(url, json=data) 
+    return response 
 
 
 def perform_patch_request():
