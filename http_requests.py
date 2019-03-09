@@ -12,17 +12,19 @@ def perform_get_request_with_params():
     """Perform GET request to given URL sending any parameter and return the response"""
     # HINT: you should add the GET parameters at the end of the url
     url = 'https://httpbin.org/get'
-    pass
+    response = requests.get(url,params={'user':'Jonathan'})
+    return response
 
 
 def perform_post_request():
     """Perform POST request to given URL sending given data and return the response"""
     url = 'https://httpbin.org/post'
-    data = {
+    data= {
         'first_name': 'Guido',
         'last_name': 'van Rossum'
     }
-    pass
+    response = requests.post(url,json=data)
+    return response
 
 
 def perform_put_request():
@@ -32,8 +34,8 @@ def perform_put_request():
         'first_name': 'Guido',
         'last_name': 'van Rossum'
     }
-    pass
-
+    r = requests.put(url, json = data)
+    return r
 
 def perform_patch_request():
     """Perform PATCH request to given URL sending given data and return the response"""
@@ -41,17 +43,19 @@ def perform_patch_request():
     data = {
         'first_name': 'Guido'
     }
-    pass
-
+    r = requests.patch(url, json = data)
+    return r
 
 def perform_delete_request():
     """Perform DELETE request to given URL and return the response"""
     url = 'https://httpbin.org/delete'
-    pass
+    r = requests.delete(url)
+    return r
 
 
 def perform_redirect_request():
     """Perform a request to a redirect URL and return the Location header that come in the response"""
     # HINT: you should use the allow_redirects parameter while doing the request
     url = 'https://httpbin.org/redirect/1'
-    pass
+    r = requests.get(url,allow_redirects=False)
+    return r.headers['location']
