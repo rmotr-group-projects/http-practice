@@ -49,7 +49,7 @@ def perform_patch_request():
     }
     
     
-    response = requests.patch(url)
+    response = requests.patch(url, json=data)
     return response
 
 
