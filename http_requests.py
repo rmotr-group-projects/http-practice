@@ -23,7 +23,7 @@ def perform_post_request():
         'first_name': 'Guido',
         'last_name': 'van Rossum'      
     }
-    response = requests.post(url, json=data)
+    response = requests.post(url, json = data)
     return response
 
 def perform_put_request():
@@ -33,7 +33,7 @@ def perform_put_request():
         'first_name': 'Guido',
         'last_name': 'van Rossum'
     }
-    response = requests.put(url,data=data)
+    response = requests.put(url, json= data)
     return response
 
 
