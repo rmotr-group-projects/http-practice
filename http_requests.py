@@ -10,7 +10,6 @@ def perform_get_request():
 
 def perform_get_request_with_params():
     """Perform GET request to given URL sending any parameter and return the response"""
-    # HINT: you should add the GET parameters at the end of the url
     url = 'https://httpbin.org/get'
     params = {
         'param1' : 'param1value',
@@ -61,7 +60,6 @@ def perform_delete_request():
 
 def perform_redirect_request():
     """Perform a request to a redirect URL and return the Location header that come in the response"""
-    # HINT: you should use the allow_redirects parameter while doing the request
     url = 'https://httpbin.org/redirect/1'
     response = requests.get(url, allow_redirects=False)
     if response.status_code >= 300 and response.status_code < 400:
