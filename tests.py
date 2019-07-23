@@ -17,10 +17,10 @@ def test_1_perform_get_request():
 
 def test_2_perform_get_request_with_params():
     response = perform_get_request_with_params()
-
     assert response.status_code == 200
     assert response.request.method == 'GET'
     assert response.request.url.startswith('https://httpbin.org/get?')
+    
     assert 'args' in response.json()
     assert response.json()['args'] != {}
     assert 'headers' in response.json()
@@ -79,5 +79,5 @@ def test_6_perform_delete_request():
 
 def test_7_perform_redirect_request():
     location_header = perform_redirect_request()
-
+    print(location_header)
     assert location_header == '/get'
